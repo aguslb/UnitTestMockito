@@ -1,7 +1,6 @@
 package com.clarity.business;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.fail;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;

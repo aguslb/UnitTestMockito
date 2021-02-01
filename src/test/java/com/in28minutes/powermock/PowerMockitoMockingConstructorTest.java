@@ -26,6 +26,7 @@ public class PowerMockitoMockingConstructorTest {
 	@InjectMocks
 	SystemUnderTest systemUnderTest;
 
+	@SuppressWarnings("unchecked")
 	@Test
 	public void powerMockito_MockingAConstructor() throws Exception {
 

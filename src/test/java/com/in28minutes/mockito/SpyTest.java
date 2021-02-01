@@ -12,6 +12,7 @@ import org.junit.Test;
 
 public class SpyTest {
 
+	@SuppressWarnings("unchecked")
 	@Test
 	public void creatingASpyOnArrayList() {
 		List<String> listSpy = spy(ArrayList.class);
@@ -25,6 +26,7 @@ public class SpyTest {
 		assertEquals("Ranga", listSpy.get(0));
 	}
 
+	@SuppressWarnings("unchecked")
 	@Test
 	public void creatingASpyOnArrayList_overridingSpecificMethods() {
 		List<String> listSpy = spy(ArrayList.class);

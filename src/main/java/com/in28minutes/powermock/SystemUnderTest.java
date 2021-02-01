@@ -10,6 +10,7 @@ interface Dependency {
 public class SystemUnderTest {
 	private Dependency dependency;
 
+	@SuppressWarnings("rawtypes")
 	public int methodUsingAnArrayListConstructor() {
 		ArrayList list = new ArrayList();
 		return list.size();
@@ -24,6 +25,7 @@ public class SystemUnderTest {
 		return UtilityClass.staticMethod(sum);
 	}
 
+	@SuppressWarnings("unused")
 	private long privateMethodUnderTest() {
 		List<Integer> stats = dependency.retrieveAllStats();
 		long sum = 0;

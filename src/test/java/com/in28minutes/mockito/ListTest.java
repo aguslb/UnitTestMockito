@@ -15,6 +15,7 @@ import org.mockito.Mockito;
 
 public class ListTest {
 
+	@SuppressWarnings("rawtypes")
 	@Test
 	public void letsMockListSize() {
 		List list = mock(List.class);
@@ -22,6 +23,7 @@ public class ListTest {
 		assertEquals(10, list.size());
 	}
 
+	@SuppressWarnings("rawtypes")
 	@Test
 	public void letsMockListSizeWithMultipleReturnValues() {
 		List list = mock(List.class);
@@ -30,6 +32,7 @@ public class ListTest {
 		assertEquals(20, list.size()); // Second Call
 	}
 
+	@SuppressWarnings("unchecked")
 	@Test
 	public void letsMockListGet() {
 		List<String> list = mock(List.class);
@@ -38,6 +41,7 @@ public class ListTest {
 		assertNull(list.get(1));
 	}
 
+	@SuppressWarnings("unchecked")
 	@Test(expected = RuntimeException.class)
 	public void letsMockListGetToThrowException() {
 		List<String> list = mock(List.class);
@@ -46,6 +50,7 @@ public class ListTest {
 		list.get(0);
 	}
 
+	@SuppressWarnings("unchecked")
 	@Test
 	public void letsMockListGetWithAny() {
 		List<String> list = mock(List.class);
@@ -56,6 +61,7 @@ public class ListTest {
 		assertEquals("in28Minutes", list.get(1));
 	}
 
+	@SuppressWarnings("unchecked")
 	@Test
 	public void bddAliases_UsingGivenWillReturn() {
 		List<String> list = mock(List.class);
